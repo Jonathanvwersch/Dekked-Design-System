@@ -1,10 +1,10 @@
 // Modal used whenever you are centering information on the screen
-import React, { useContext } from "react";
-import { ThemeContext } from "styled-components";
-import { Flex, Overlay, ShadowCard } from "..";
-import { MODAL_TYPE, SIZES } from "../../types";
-import Spacer from "../Spacer/Spacer";
-import FocusLock, { AutoFocusInside } from "react-focus-lock";
+import React, { useContext } from 'react';
+import { ThemeContext } from 'styled-components';
+import { Flex, Overlay, ShadowCard } from '..';
+import { MODAL_TYPE, SIZES } from '../../typesAndEnums';
+import Spacer from '../Spacer/Spacer';
+import FocusLock, { AutoFocusInside } from 'react-focus-lock';
 
 interface GeneralModalProps {
   isOpen: boolean;

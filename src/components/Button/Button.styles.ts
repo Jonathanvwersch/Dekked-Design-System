@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { SIZES } from "../../types";
+import styled from 'styled-components';
+import { SIZES } from '../../typesAndEnums';
 
 interface ButtonProps {
   isLoading: boolean;
@@ -54,7 +54,7 @@ export const StyledButton = styled.button<ButtonProps>`
       fill: ${({ theme }) => theme.colors.backgrounds.pageBackground};
     }
     cursor: ${({ isLoading }: { isLoading: boolean }) =>
-      isLoading ? "progress" : "not-allowed"};
+      isLoading ? 'progress' : 'not-allowed'};
     background-color: ${({ theme }) => theme.colors.disabled};
     color: ${({ theme }) => theme.colors.backgrounds.pageBackground};
     &:active,

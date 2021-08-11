@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { SIZES } from "../../types";
-import { BoxProps, marginAndPadding } from "../Box/Box";
+import React from 'react';
+import styled from 'styled-components';
+import { SIZES } from '../../typesAndEnums';
+import { BoxProps, marginAndPadding } from '../Box/Box';
 
 interface CardProps {
   padding?: string;
@@ -39,7 +39,7 @@ const StyledCard = styled.div<CardPropsUnion>`
   padding: ${({ padding, theme }) =>
     padding ? padding : theme.spacers.size16};
   height: ${({ height }) => height};
-  width: ${({ width }) => (width ? width : "100%")};
+  width: ${({ width }) => (width ? width : '100%')};
   border: ${({ border }) => border};
   border-radius: ${({ theme, borderRadius }) =>
     borderRadius ? borderRadius : theme.sizes.borderRadius[SIZES.MEDIUM]};

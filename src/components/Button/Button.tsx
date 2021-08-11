@@ -1,8 +1,8 @@
-import React, { ReactNode } from "react";
-import { ButtonDanger, ButtonPrimary, ButtonSecondary } from "./Button.styles";
-import { ComponentLoadingSpinner } from "../LoadingSpinner/LoadingSpinner";
-import { BUTTON_THEME, BUTTON_TYPES, SIZES } from "../../types";
-import styled from "styled-components";
+import React, { ReactNode } from 'react';
+import { ButtonDanger, ButtonPrimary, ButtonSecondary } from './Button.styles';
+import { ComponentLoadingSpinner } from '../LoadingSpinner/LoadingSpinner';
+import { BUTTON_THEME, BUTTON_TYPES, SIZES } from '../../typesAndEnums';
+import styled from 'styled-components';
 
 const ButtonStyles = {
   primary: ButtonPrimary,
@@ -42,7 +42,7 @@ const Button: React.FC<ButtonProps> = ({
   id,
 }) => {
   const Button = ButtonStyles[buttonStyle];
-  const buttonClassName = className ? className : fullWidth ? "fullWidth" : "";
+  const buttonClassName = className ? className : fullWidth ? 'fullWidth' : '';
 
   return (
     <Button

@@ -1,11 +1,11 @@
-import React, { ReactElement, useContext } from "react";
-import { createPortal } from "react-dom";
-import { FormattedMessage, useIntl } from "react-intl";
-import ReactTooltip, { Effect, Offset, Place, Type } from "react-tooltip";
-import styled, { ThemeContext } from "styled-components";
-import { ConditionalWrapper } from "..";
-import { formatMessage } from "../../intl";
-import { SIZES } from "../../types";
+import React, { ReactElement, useContext } from 'react';
+import { createPortal } from 'react-dom';
+import { FormattedMessage, useIntl } from 'react-intl';
+import ReactTooltip, { Effect, Offset, Place, Type } from 'react-tooltip';
+import styled, { ThemeContext } from 'styled-components';
+import { ConditionalWrapper } from '..';
+import { formatMessage } from '../../intl';
+import { SIZES } from '../../typesAndEnums';
 
 interface TooltipProps {
   text: string;
@@ -24,8 +24,8 @@ interface TooltipProps {
 
 const Tooltip: React.FC<TooltipProps> = ({
   id,
-  place = "bottom",
-  effect = "solid",
+  place = 'bottom',
+  effect = 'solid',
   offset,
   textColor,
   backgroundColor,
@@ -58,7 +58,7 @@ const Tooltip: React.FC<TooltipProps> = ({
         >
           <FormattedMessage id={text} values={values} />
         </StyledTooltip>,
-        document.getElementById("modal-overlay")!
+        document.getElementById('modal-overlay')!
       )}
 
       <ConditionalWrapper
@@ -76,7 +76,7 @@ const Tooltip: React.FC<TooltipProps> = ({
 };
 
 const StyledTooltip = styled(ReactTooltip).attrs({
-  className: "dekkedTooltip",
+  className: 'dekkedTooltip',
 })`
   &.dekkedTooltip {
     padding: ${({ theme }) => `${theme.spacers.size4} ${theme.spacers.size8}`};

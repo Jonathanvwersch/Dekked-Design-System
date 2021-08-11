@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
-import { FormattedMessage } from "react-intl";
-import styled, { keyframes, ThemeContext } from "styled-components";
-import { IconWrapper, Spacer } from "..";
-import { LogoIcon } from "../../icons";
-import { SIZES } from "../../types";
-import { ThemeType } from "../../styles/theme";
+import React, { useContext } from 'react';
+import { FormattedMessage } from 'react-intl';
+import styled, { keyframes, ThemeContext } from 'styled-components';
+import { IconWrapper, Spacer } from '..';
+import { LogoIcon } from '../../icons';
+import { SIZES } from '../../typesAndEnums';
+import { ThemeType } from '../../styles/theme';
 
 interface LoadingSpinnerProps {
   size?: SIZES;

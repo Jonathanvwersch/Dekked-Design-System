@@ -1,14 +1,14 @@
 // Wrapper component for making an icon into a button with a hover and active state
-import React, { ReactNode } from "react";
-import { useIntl } from "react-intl";
-import styled from "styled-components";
-import { formatMessage } from "../../intl";
-import { SIZES } from "../../types";
+import React, { ReactNode } from 'react';
+import { useIntl } from 'react-intl';
+import styled from 'styled-components';
+import { formatMessage } from '../../intl';
+import { SIZES } from '../../typesAndEnums';
 
 export enum FILL_TYPE {
-  FILL = "fill",
-  STROKE = "stroke",
-  BOTH = "both",
+  FILL = 'fill',
+  STROKE = 'stroke',
+  BOTH = 'both',
 }
 
 interface IconActiveProps {
@@ -72,9 +72,9 @@ const StyledIconActive = styled.button<IconActiveProps>`
   padding: 2px;
   border: none;
   position: relative;
-  cursor: ${({ cursor }) => cursor || "pointer"};
+  cursor: ${({ cursor }) => cursor || 'pointer'};
   outline: none;
-  background-color: ${({ backgroundColor }) => backgroundColor || "inherit"};
+  background-color: ${({ backgroundColor }) => backgroundColor || 'inherit'};
   border-radius: ${({ theme }) => theme.sizes.borderRadius[SIZES.SMALL]};
 
   &:focus,
@@ -100,7 +100,7 @@ const StyledIconActive = styled.button<IconActiveProps>`
             : undefined};
       }
     }
-    background-color: ${({ backgroundColor }) => backgroundColor || "inherit"};
+    background-color: ${({ backgroundColor }) => backgroundColor || 'inherit'};
   }
 
   &.active {

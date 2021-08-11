@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { SIZES } from "../../types";
+import styled from 'styled-components';
+import { SIZES } from '../../typesAndEnums';
 
 interface InputProps {
   height: SIZES;
@@ -68,7 +68,7 @@ export const Label = styled.label`
 `;
 
 export const LabelAndInputWrapper = styled.div<{ width?: string }>`
-  width: ${({ width }) => width || "100%"};
+  width: ${({ width }) => width || '100%'};
   position: relative;
   display: flex;
   flex-direction: column;

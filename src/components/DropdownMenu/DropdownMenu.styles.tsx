@@ -1,5 +1,5 @@
-import { SIZES } from "../../types";
-import { ThemeType } from "../../styles/theme";
+import { SIZES } from '../../typesAndEnums';
+import { ThemeType } from '../../styles/theme';
 
 export const customStyles: (theme: ThemeType) => Partial<{}> = (
   theme: ThemeType
@@ -12,24 +12,25 @@ export const customStyles: (theme: ThemeType) => Partial<{}> = (
   container: (styles: any) => ({
     ...styles,
     fontFamily: theme.typography.fontFamily,
-    cursor: "pointer",
+    cursor: 'pointer',
   }),
   option: (styles: any, state: any) => ({
     ...styles,
     color: state.isSelected ? theme.colors.primary : theme.colors.fontColor,
-    cursor: "pointer",
+    cursor: 'pointer',
     backgroundColor: theme.colors.backgrounds.pageBackground,
-    "&:hover": {
+    '&:hover': {
       filter: theme.colors.hover.filter,
     },
-    "&:focus": {
-      backgroundColor: "transparent",
+    '&:focus': {
+      backgroundColor: 'transparent',
     },
-    "&:active": {
-      backgroundColor: "transparent",
+    '&:active': {
+      backgroundColor: 'transparent',
     },
   }),
   menu: (styles: any) => ({
+    ...styles,
     backgroundColor: theme.colors.backgrounds.pageBackground,
     border: `1px solid ${theme.colors.grey2}`,
     marginTop: theme.spacers.size4,
@@ -45,35 +46,35 @@ export const customStyles: (theme: ThemeType) => Partial<{}> = (
   control: (styles: any) => ({
     ...styles,
     // none of react-select's styles are passed to <Control />
-    width: "100%",
+    width: '100%',
     borderRadius: theme.sizes.borderRadius[SIZES.MEDIUM],
     minHeight: theme.sizes.input[SIZES.SMALL],
     height: theme.sizes.input[SIZES.SMALL],
     backgroundColor: theme.colors.backgrounds.pageBackground,
-    cursor: "pointer",
+    cursor: 'pointer',
     fontSize: theme.typography.fontSizes.size14,
     color: theme.colors.fontColor,
     padding: `0 ${theme.spacers.size8}`,
     border: `1px solid ${theme.colors.grey2}`,
-    alignItems: "center",
-    placeContent: "center",
-    boxShadow: "none",
+    alignItems: 'center',
+    placeContent: 'center',
+    boxShadow: 'none',
 
-    "&:hover": {
+    '&:hover': {
       border: `1px solid ${theme.colors.primary}`,
-      outline: "none",
+      outline: 'none',
     },
 
-    "&:focus": {
+    '&:focus': {
       border: `1px solid ${theme.colors.primary}`,
-      outline: "none",
-      boxShadow: "none",
+      outline: 'none',
+      boxShadow: 'none',
     },
 
-    "&:disabled": {
+    '&:disabled': {
       backgroundColor: theme.colors.grey2,
       color: theme.colors.backgrounds.pageBackground,
-      cursor: "not-allowed",
+      cursor: 'not-allowed',
     },
   }),
 });

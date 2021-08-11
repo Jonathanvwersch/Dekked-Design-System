@@ -49,4 +49,5 @@ export { default as GoogleIcon } from './GoogleIcon';
 export { default as EyeIcon } from './EyeIcon';
 export { default as ClearIcon } from './ClearIcon';
 export { default as ErrorIcon } from './ErrorIcon';
+export { default as FullLogoIcon } from './FullLogoIcon';
 export * from './Icon.styles';

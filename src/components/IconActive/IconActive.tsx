@@ -3,13 +3,7 @@ import React, { ReactNode } from 'react';
 import { useIntl } from 'react-intl';
 import styled from 'styled-components';
 import { formatMessage } from '../../intl';
-import { SIZES } from '../../typesAndEnums';
-
-export enum FILL_TYPE {
-  FILL = 'fill',
-  STROKE = 'stroke',
-  BOTH = 'both',
-}
+import { FILL_TYPE, SIZES } from '../../typesAndEnums';
 
 interface IconActiveProps {
   children: ReactNode;

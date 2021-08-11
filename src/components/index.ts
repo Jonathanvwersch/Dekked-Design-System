@@ -15,6 +15,7 @@ export { default as Button } from './Button/Button';
 export { default as Input } from './Input/Input';
 export { default as Block } from './Block/Block';
 export { default as Box } from './Box/Box';
+export { default as DropdownMenu } from './DropdownMenu/DropdownMenu';
 export { default as Footer } from './Footer/Footer';
 export { default as Tooltip } from './Tooltip/Tooltip';
 export { default as DragBlock } from './DragBlock/DragBlock';

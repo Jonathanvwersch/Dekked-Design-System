@@ -14,6 +14,12 @@ export enum MODAL_TYPE {
   TOOL_TIP = 'non-modal-non-lightbox',
 }
 
+export enum FILL_TYPE {
+  FILL = 'fill',
+  STROKE = 'stroke',
+  BOTH = 'both',
+}
+
 export enum BUTTON_TYPES {
   SUBMIT = 'submit',
   BUTTON = 'button',

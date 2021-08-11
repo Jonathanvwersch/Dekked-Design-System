@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
-import { ThemeType } from "../styles/theme";
-import { ThemeContext } from "styled-components";
-import { Svg, IconProps } from ".";
+import React, { useContext } from 'react';
+import { ThemeType } from '../theme/theme';
+import { ThemeContext } from 'styled-components';
+import { Svg, IconProps } from '.';
 
 const DividerIcon: React.FC<IconProps & { strokeWidth?: string }> = ({
   color,
@@ -20,7 +20,7 @@ const DividerIcon: React.FC<IconProps & { strokeWidth?: string }> = ({
         x2="8.15"
         y2="16"
         stroke={iconColor}
-        strokeWidth={strokeWidth ? strokeWidth : "0.5"}
+        strokeWidth={strokeWidth ? strokeWidth : '0.5'}
       />
     </Svg>
   );

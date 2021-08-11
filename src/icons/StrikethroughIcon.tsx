@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { ThemeType } from '../styles/theme';
+import { ThemeType } from '../theme/theme';
 import { ThemeContext } from 'styled-components';
 import { Svg, IconProps } from '.';
 

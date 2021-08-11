@@ -4,7 +4,7 @@ import styled, { keyframes, ThemeContext } from 'styled-components';
 import { IconWrapper, Spacer } from '..';
 import { LogoIcon } from '../../icons';
 import { SIZES } from '../../typesAndEnums';
-import { ThemeType } from '../../styles/theme';
+import { ThemeType } from '../../theme/theme';
 
 interface LoadingSpinnerProps {
   size?: SIZES;

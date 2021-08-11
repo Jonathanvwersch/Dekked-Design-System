@@ -1,14 +1,14 @@
-import styled from "styled-components";
-import { ThemeType } from "../../styles/theme";
-import { commonStyles, headingStyles } from "./Headers.styles";
+import styled from 'styled-components';
+import { ThemeType } from '../../theme/theme';
+import { commonStyles, headingStyles } from './Headers.styles';
 
-type HeadingTagName = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+type HeadingTagName = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
 export type HeadingProps = {
   fontColor?: string;
   styledAs?: HeadingTagName;
   textAlign?: string;
-  fontWeight?: keyof ThemeType["typography"]["fontWeights"];
+  fontWeight?: keyof ThemeType['typography']['fontWeights'];
 };
 
 export const H1 = styled.h1<HeadingProps>`

@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
-import { Svg, IconProps } from ".";
+import React, { useContext } from 'react';
+import { Svg, IconProps } from '.';
 
-import { ThemeContext } from "styled-components";
-import { ThemeType } from "../styles/theme";
+import { ThemeContext } from 'styled-components';
+import { ThemeType } from '../theme/theme';
 
 const SubscriptIcon: React.FC<IconProps> = ({ color, size }) => {
   const theme: ThemeType = useContext(ThemeContext);

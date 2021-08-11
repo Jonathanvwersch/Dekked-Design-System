@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
-import { ThemeType } from "../styles/theme";
-import { ThemeContext } from "styled-components";
-import { IconProps, SvgVaried } from ".";
+import React, { useContext } from 'react';
+import { ThemeType } from '../theme/theme';
+import { ThemeContext } from 'styled-components';
+import { IconProps, SvgVaried } from '.';
 
 const FullLogoIcon: React.FC<IconProps> = ({ color, height, width }) => {
   const theme: ThemeType = useContext(ThemeContext);
@@ -9,8 +9,8 @@ const FullLogoIcon: React.FC<IconProps> = ({ color, height, width }) => {
 
   return (
     <SvgVaried
-      height={height ? height : "50px"}
-      width={width ? width : "180px"}
+      height={height ? height : '50px'}
+      width={width ? width : '180px'}
       viewBox="0 0 1701 441"
       fill="none"
     >

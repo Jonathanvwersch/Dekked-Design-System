@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
-import styled, { ThemeContext } from "styled-components";
-import { ThemeType } from "../../styles/theme";
-import { Card, Spacer, Text, Flex } from "../";
+import React, { useContext } from 'react';
+import styled, { ThemeContext } from 'styled-components';
+import { ThemeType } from '../../theme/theme';
+import { Card, Spacer, Text, Flex } from '../';
 
 interface ThumbnailCardProps {
   topText: string;

@@ -1,5 +1,5 @@
 import { SIZES } from '../../typesAndEnums';
-import { ThemeType } from '../../styles/theme';
+import { ThemeType } from '../../theme/theme';
 
 export const customStyles: (theme: ThemeType) => Partial<{}> = (
   theme: ThemeType

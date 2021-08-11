@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
-import { ThemeType } from "../styles/theme";
-import { Svg, IconProps } from ".";
+import React, { useContext } from 'react';
+import { ThemeType } from '../theme/theme';
+import { Svg, IconProps } from '.';
 
-import { ThemeContext } from "styled-components";
+import { ThemeContext } from 'styled-components';
 
 const RestoreIcon: React.FC<IconProps> = ({ color, size }) => {
   const theme: ThemeType = useContext(ThemeContext);

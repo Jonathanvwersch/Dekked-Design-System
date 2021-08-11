@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
-import { ThemeType } from "../styles/theme";
-import { ThemeContext } from "styled-components";
-import { Svg, IconProps } from ".";
+import React, { useContext } from 'react';
+import { ThemeType } from '../theme/theme';
+import { ThemeContext } from 'styled-components';
+import { Svg, IconProps } from '.';
 
 const ErrorIcon: React.FC<IconProps> = ({ color, size }) => {
   const theme: ThemeType = useContext(ThemeContext);

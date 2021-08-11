@@ -50,4 +50,3 @@ export { default as EyeIcon } from './EyeIcon';
 export { default as ClearIcon } from './ClearIcon';
 export { default as ErrorIcon } from './ErrorIcon';
 export * from './Icon.styles';
-export * from './Icon.types';

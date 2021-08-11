@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
 import { ThemeType } from '../theme/theme';
-import { Svg, IconProps } from '.';
-
-const HamburgerMenuIcon: React.FC<IconProps> = ({ color, size }) => {
+import { Svg } from '.';
+import { IconType } from '../typesAndEnums';
+const HamburgerMenuIcon: React.FC<IconType> = ({ color, size }) => {
   const theme: ThemeType = useContext(ThemeContext);
   const iconColor = color ? color : theme.colors.iconColor;
 

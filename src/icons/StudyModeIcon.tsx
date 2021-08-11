@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { ThemeType } from '../theme/theme';
 import { ThemeContext } from 'styled-components';
-import { Svg, IconProps } from '.';
-
-const StudyModeIcon: React.FC<IconProps> = ({ color, size, rotate }) => {
+import { Svg } from '.';
+import { IconType } from '../typesAndEnums';
+const StudyModeIcon: React.FC<IconType> = ({ color, size, rotate }) => {
   const theme: ThemeType = useContext(ThemeContext);
   const iconColor = color ? color : theme.colors.iconColor;
 

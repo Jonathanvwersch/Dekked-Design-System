@@ -32,7 +32,7 @@ export enum ROTATE {
   ZERO = 'rotate(0deg)',
 }
 
-export type IconProps = {
+export type IconType = {
   color?: string;
   size?: SIZES | string;
   rotate?: ROTATE;

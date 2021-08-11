@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import { Svg, IconProps } from ".";
-
-const GoogleIcon: React.FC<IconProps> = ({ size }) => {
+import { Svg } from '.';
+import { IconType } from '../typesAndEnums';
+const GoogleIcon: React.FC<IconType> = ({ size }) => {
   return (
     <Svg size={size} viewBox="0 0 16 16" fill="none">
       <path

@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import { ThemeType } from '../theme/theme';
-import { Svg, IconProps } from '.';
-
+import { Svg } from '.';
+import { IconType } from '../typesAndEnums';
 import { ThemeContext } from 'styled-components';
 
-const MoveIcon: React.FC<IconProps> = ({ color, size }) => {
+const MoveIcon: React.FC<IconType> = ({ color, size }) => {
   const theme: ThemeType = useContext(ThemeContext);
   const iconColor = color ? color : theme.colors.iconColor;
 

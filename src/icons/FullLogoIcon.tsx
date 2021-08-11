@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { ThemeType } from '../theme/theme';
 import { ThemeContext } from 'styled-components';
-import { IconProps, SvgVaried } from '.';
+import { IconType, SvgVaried } from '.';
 
-const FullLogoIcon: React.FC<IconProps> = ({ color, height, width }) => {
+const FullLogoIcon: React.FC<IconType> = ({ color, height, width }) => {
   const theme: ThemeType = useContext(ThemeContext);
   const iconColor = color ? color : theme.colors.iconColor;
 

@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { ThemeType } from '../theme/theme';
 import { ThemeContext } from 'styled-components';
-import { Svg, IconProps } from '.';
-
-const DividerIcon: React.FC<IconProps & { strokeWidth?: string }> = ({
+import { Svg } from '.';
+import { IconType } from '../typesAndEnums';
+const DividerIcon: React.FC<IconType & { strokeWidth?: string }> = ({
   color,
   size,
   rotate,

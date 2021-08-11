@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { ThemeType } from '../theme/theme';
 import { ThemeContext } from 'styled-components';
-import { Svg, IconProps } from '.';
-
-const BulletedListIcon: React.FC<IconProps> = ({ size, color }) => {
+import { Svg } from '.';
+import { IconType } from '../typesAndEnums';
+const BulletedListIcon: React.FC<IconType> = ({ size, color }) => {
   const theme: ThemeType = useContext(ThemeContext);
   const iconColor = color ? color : theme.colors.iconColor;
 

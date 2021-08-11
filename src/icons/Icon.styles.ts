@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import { IconProps, SIZES } from '../typesAndEnums';
+import { IconType, SIZES } from '../typesAndEnums';
 import Icon from './Icon';
 
 // SVG wrapper component to be used when height and width of the component are equal to one another
 // If no size is provided the SVG will default to a size of small, otherwise it will equal the specified size
-export const Svg = styled(Icon)<IconProps>`
+export const Svg = styled(Icon)<IconType>`
   transform: ${({ rotate }) => rotate};
   width: ${({ theme, size }) =>
     !size
@@ -27,7 +27,7 @@ export const Svg = styled(Icon)<IconProps>`
 `;
 
 // SVG wrapper component to be used when height and width of the component are different to one another
-export const SvgVaried = styled(Icon)<IconProps>`
+export const SvgVaried = styled(Icon)<IconType>`
   transform: ${({ rotate }) => rotate};
   width: ${({ width }) => width};
   height: ${({ height }) => height};

@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
-import { Svg, IconProps } from '.';
-
+import { Svg } from '.';
+import { IconType } from '../typesAndEnums';
 import { ThemeContext } from 'styled-components';
 import { ThemeType } from '../theme/theme';
 
-const SupersciptIcon: React.FC<IconProps> = ({ color, size }) => {
+const SupersciptIcon: React.FC<IconType> = ({ color, size }) => {
   const theme: ThemeType = useContext(ThemeContext);
   const iconColor = color ? color : theme.colors.iconColor;
 

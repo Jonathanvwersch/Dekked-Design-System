@@ -1,5 +1,5 @@
 import { IntlShape } from 'react-intl';
-import { DropDownType } from '../types';
+import { DropDownType } from '../typesAndEnums';
 
 const translateOptions = (intl: IntlShape, options: DropDownType[]) =>
   options.map((option) => ({

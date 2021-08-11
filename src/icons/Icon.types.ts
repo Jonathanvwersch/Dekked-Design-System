@@ -1,4 +1,4 @@
-import { SIZES } from '../types';
+import { SIZES } from '../typesAndEnums';
 
 export enum ROTATE {
   NINETY = 'rotate(90deg)',

@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
-import Select, { ActionMeta, OptionTypeBase } from "react-select";
-import { ThemeContext } from "styled-components";
-import { DropDownType } from "../../types";
-import { customStyles } from "./DropdownMenu.styles";
+import React, { useContext } from 'react';
+import Select, { ActionMeta, OptionTypeBase } from 'react-select';
+import { ThemeContext } from 'styled-components';
+import { DropDownType } from '../../typesAndEnums';
+import { customStyles } from './DropdownMenu.styles';
 
 export interface DropdownMenuProps {
   options: DropDownType[];

@@ -1,6 +1,6 @@
-import { createGlobalStyle } from "styled-components";
-import { SIZES } from "../types";
-import { ThemeType } from "./theme";
+import { createGlobalStyle } from 'styled-components';
+import { SIZES } from '../typesAndEnums';
+import { ThemeType } from './theme';
 
 const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     a {

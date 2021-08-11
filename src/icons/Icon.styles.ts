@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { IconProps } from '.';
-import { SIZES } from '../types';
+import { SIZES } from '../typesAndEnums';
 import Icon from './Icon';
 
 // SVG wrapper component to be used when height and width of the component are equal to one another

@@ -1,7 +1,7 @@
 import React, { ChangeEvent, useContext, useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Flex, Spacer } from '..';
-import { SIZES } from '../../types';
+import { SIZES } from '../../typesAndEnums';
 import {
   InputIconWrapper,
   InputWrapper,

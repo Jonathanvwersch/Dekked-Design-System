@@ -1,11 +1,11 @@
 /* Overlay container used to render all popovers and modals */
-import React, { useRef } from "react";
-import { createPortal } from "react-dom";
-import styled from "styled-components";
-import { CloseIcon } from "../../icons";
-import { useOutsideClickListener } from "../../utils/hooks";
-import { CoordsType, MODAL_TYPE, SIZES } from "../../types";
-import IconActive from "../IconActive/IconActive";
+import React, { useRef } from 'react';
+import { createPortal } from 'react-dom';
+import styled from 'styled-components';
+import { CloseIcon } from '../../icons';
+import { useOutsideClickListener } from '../../utils/hooks';
+import { CoordsType, MODAL_TYPE, SIZES } from '../../typesAndEnums';
+import IconActive from '../IconActive/IconActive';
 
 interface OverlayProps {
   children: JSX.Element;
@@ -41,9 +41,9 @@ const Overlay: React.FC<OverlayProps> = ({
   const modalRef = useRef<HTMLDivElement>(null);
   const centeredOverlayClassname =
     center && type === MODAL_TYPE.NON_MODAL_LIGHTBOX
-      ? "centered non-modal-lightbox"
+      ? 'centered non-modal-lightbox'
       : center
-      ? "centered"
+      ? 'centered'
       : undefined;
 
   useOutsideClickListener(modalRef, handleClose, withOutsideClick && isOpen);
@@ -56,7 +56,7 @@ const Overlay: React.FC<OverlayProps> = ({
             <ModalType className={type} />
           ) : null}
           <Modal
-            className={close ? "close" : undefined}
+            className={close ? 'close' : undefined}
             ref={modalRef}
             coords={coords}
             modalWidth={modalWidth}
@@ -78,7 +78,7 @@ const Overlay: React.FC<OverlayProps> = ({
         </CenteredOverlay>
       </OuterContainer>
     ) : null,
-    document.getElementById("modal-overlay")!
+    document.getElementById('modal-overlay')!
   );
 };
 
@@ -93,10 +93,10 @@ const Modal = styled.div<{
   modalWidth?: string;
   modalHeight?: string;
 }>`
-  top: ${({ coords }) => (coords?.top ? `${coords?.top}px` : "auto")};
-  bottom: ${({ coords }) => (coords?.bottom ? `${coords?.bottom}px` : "auto")};
-  left: ${({ coords }) => (coords?.left ? `${coords?.left}px` : "auto")};
-  right: ${({ coords }) => (coords?.right ? `${coords?.right}px` : "auto")};
+  top: ${({ coords }) => (coords?.top ? `${coords?.top}px` : 'auto')};
+  bottom: ${({ coords }) => (coords?.bottom ? `${coords?.bottom}px` : 'auto')};
+  left: ${({ coords }) => (coords?.left ? `${coords?.left}px` : 'auto')};
+  right: ${({ coords }) => (coords?.right ? `${coords?.right}px` : 'auto')};
   width: ${({ modalWidth }) => modalWidth};
   max-width: ${({ modalWidth, theme }) =>
     modalWidth && theme.sizes.wrappers[SIZES.SMALL]};

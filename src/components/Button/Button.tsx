@@ -21,6 +21,7 @@ interface ButtonProps {
   handleClick?: (args?: any) => any;
   size?: SIZES;
   width?: SIZES | string;
+  fontSize?: string;
   borderRadius?: string;
   ariaLabel?: string;
   id?: string;
@@ -37,6 +38,7 @@ const Button: React.FC<ButtonProps> = ({
   size = SIZES.SMALL,
   width,
   className,
+  fontSize,
   borderRadius,
   ariaLabel,
   id,
@@ -56,6 +58,7 @@ const Button: React.FC<ButtonProps> = ({
       width={width}
       borderRadius={borderRadius}
       aria-label={ariaLabel}
+      fontSize={fontSize}
     >
       {isLoading ? (
         <>

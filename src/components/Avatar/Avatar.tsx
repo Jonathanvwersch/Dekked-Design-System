@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 interface AvatarProps {
   diameter?: string;
@@ -17,7 +17,7 @@ const Avatar: React.FC<AvatarProps> = ({ children, ...props }) => {
 };
 
 const StyledAvatar = styled.div<AvatarProps>`
-  cursor: ${({ handleClick }) => (handleClick ? "pointer" : "auto")};
+  cursor: ${({ handleClick }) => (handleClick ? 'pointer' : 'auto')};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,10 +33,10 @@ const StyledAvatar = styled.div<AvatarProps>`
     diameter ? diameter : theme.spacers.size32};
   background-color: ${({ theme, backgroundColor }) =>
     backgroundColor ? backgroundColor : theme.colors.primary};
-  color: ${({ fontColor }) => (fontColor ? fontColor : "white")};
+  color: ${({ fontColor }) => (fontColor ? fontColor : 'white')};
 
   &:hover {
-    transform: ${({ handleClick }) => handleClick && "scale(1.1)"};
+    transform: ${({ handleClick }) => handleClick && 'scale(1.1)'};
   }
 `;
 

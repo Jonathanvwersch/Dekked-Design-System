@@ -6,6 +6,7 @@ import Icon from './Icon';
 // If no size is provided the SVG will default to a size of small, otherwise it will equal the specified size
 export const Svg = styled(Icon)<IconType>`
   transform: ${({ rotate }) => rotate};
+  transform: scale(${({ scale }) => scale})
   width: ${({ theme, size }) =>
     !size
       ? theme.sizes.icons[SIZES.SMALL]

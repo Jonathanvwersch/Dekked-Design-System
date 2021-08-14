@@ -43,6 +43,7 @@ export type IconType = {
   size?: SIZES | string;
   rotate?: ROTATE;
   height?: string;
+  scale?: string;
   width?: string;
   ariaLabel?: string;
   className?: string;

@@ -26,10 +26,3 @@ export const Svg = styled(Icon)<IconType>`
       ? theme.sizes.icons[size]
       : size};
 `;
-
-// SVG wrapper component to be used when height and width of the component are different to one another
-export const SvgVaried = styled(Icon)<IconType>`
-  transform: ${({ rotate }) => rotate};
-  width: ${({ width }) => width};
-  height: ${({ height }) => height};
-`;

@@ -6,6 +6,7 @@ interface ButtonProps {
   size: SIZES;
   width: SIZES | string;
   borderRadius?: string;
+  fontSize?: string;
 }
 
 export const StyledButton = styled.button<ButtonProps>`
@@ -14,8 +15,10 @@ export const StyledButton = styled.button<ButtonProps>`
   border-radius: ${({ theme, borderRadius }) =>
     borderRadius ? borderRadius : theme.sizes.borderRadius[SIZES.MEDIUM]};
   padding: ${({ theme }) => `${theme.spacers.size4} ${theme.spacers.size16}`};
-  font-size: ${({ theme, size }) =>
-    size === SIZES.SMALL
+  font-size: ${({ theme, size, fontSize }) =>
+    fontSize
+      ? fontSize
+      : size === SIZES.SMALL
       ? theme.typography.fontSizes.size14
       : theme.typography.fontSizes.size16};
   height: ${({ theme, size }) => theme.sizes.button.height[size]};
@@ -40,7 +43,7 @@ export const StyledButton = styled.button<ButtonProps>`
     width: 100%;
   }
 
-  &:focus,
+  &:focus-visible,
   &:hover {
     filter: ${({ theme }) => theme.colors.hover.filter};
   }

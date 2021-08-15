@@ -1,5 +1,4 @@
 import React, { ChangeEvent, useContext, useState } from 'react';
-import { FormattedMessage } from 'react-intl';
 import { Flex, Spacer } from '..';
 import { SIZES } from '../../typesAndEnums';
 import {
@@ -107,9 +106,7 @@ const Input: React.FC<InputProps> = ({
           <Flex mt={theme.spacers.size4}>
             <ErrorIcon color={theme.colors.danger} />
             <Spacer width={theme.spacers.size8} />
-            <Text fontColor={theme.colors.danger}>
-              <FormattedMessage id={errorMessage} />
-            </Text>
+            <Text fontColor={theme.colors.danger}>{errorMessage}</Text>
           </Flex>
         )}
       </Flex>

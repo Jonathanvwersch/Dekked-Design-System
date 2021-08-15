@@ -1,8 +1,6 @@
 // Wrapper component for making an icon into a button with a hover and active state
 import React, { ReactNode } from 'react';
-import { useIntl } from 'react-intl';
 import styled from 'styled-components';
-import { formatMessage } from '../../intl';
 import { FILL_TYPE, SIZES } from '../../typesAndEnums';
 
 interface IconActiveProps {
@@ -36,8 +34,6 @@ const IconActive: React.FC<IconActiveProps> = ({
   dangerHover,
   id,
 }) => {
-  const intl = useIntl();
-
   return (
     <StyledIconActive
       ref={iconActiveRef}
@@ -48,7 +44,7 @@ const IconActive: React.FC<IconActiveProps> = ({
       fillType={fillType}
       tabIndex={tabIndex}
       cursor={cursor}
-      aria-label={ariaLabel && formatMessage(ariaLabel, intl)}
+      aria-label={ariaLabel}
       disabled={isDisabled}
       dangerHover={dangerHover}
       id={id}
@@ -71,7 +67,7 @@ const StyledIconActive = styled.button<IconActiveProps>`
   background-color: ${({ backgroundColor }) => backgroundColor || 'inherit'};
   border-radius: ${({ theme }) => theme.sizes.borderRadius[SIZES.SMALL]};
 
-  &:focus,
+  &:focus-visible,
   &:hover {
     background-color: ${({ theme }) => theme.colors.iconHover};
   }

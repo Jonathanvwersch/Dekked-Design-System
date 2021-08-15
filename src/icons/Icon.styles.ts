@@ -26,3 +26,10 @@ export const Svg = styled(Icon)<IconType>`
       ? theme.sizes.icons[size]
       : size};
 `;
+
+export const SvgVaried = styled(Icon)<IconType>`
+  width: ${({ width }) => width && width};
+  height: ${({ height }) => height && height};
+  transform: ${({ rotate }) => rotate};
+  transform: scale(${({ scale }) => scale});
+`;

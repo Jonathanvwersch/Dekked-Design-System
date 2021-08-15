@@ -102,7 +102,7 @@ const StyledHoverCard = styled.button<HoverCardProps & { active?: boolean }>`
     backgroundColor ? backgroundColor : theme.colors.secondary};
   border-radius: ${({ borderRadius }) => borderRadius};
   user-select: none;
-  &:focus,
+  &:focus-visible,
   &:hover {
     filter: ${({ theme, turnOffHover }) =>
       !turnOffHover && theme.colors.hover.filter};

@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { FormattedMessage } from 'react-intl';
 import styled, { keyframes, ThemeContext } from 'styled-components';
 import { IconWrapper, Spacer } from '..';
 import { LogoIcon } from '../../icons';
@@ -31,7 +30,7 @@ export const ComponentLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         {text ? (
           <>
             <Spacer width={theme.spacers.size8} />
-            <FormattedMessage id={text} />
+            {text}
           </>
         ) : null}
       </IconWrapper>
@@ -54,7 +53,7 @@ export const FullPageLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         {text ? (
           <>
             <Spacer width={theme.spacers.size8} />
-            <FormattedMessage id={text} />
+            {text}
           </>
         ) : null}
       </IconWrapper>

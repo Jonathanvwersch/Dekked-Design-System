@@ -22,7 +22,7 @@ export const customStyles: (theme: ThemeType) => Partial<{}> = (
     '&:hover': {
       filter: theme.colors.hover.filter,
     },
-    '&:focus': {
+    '&:focus-visble': {
       backgroundColor: 'transparent',
     },
     '&:active': {

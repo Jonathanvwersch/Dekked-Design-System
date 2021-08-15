@@ -1,5 +1,5 @@
-import { css } from "styled-components";
-import { HeadingProps } from "./Headers";
+import { css } from 'styled-components';
+import { HeadingProps } from './Headers';
 
 export const commonStyles = css<HeadingProps>`
   margin: 0;

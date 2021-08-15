@@ -1,15 +1,20 @@
 import React, { useContext } from 'react';
 import { ThemeType } from '../theme/theme';
 import { ThemeContext } from 'styled-components';
-import { Svg } from '.';
+import { SvgVaried } from '.';
 import { IconType } from '../typesAndEnums';
 
-const FullLogoIcon: React.FC<IconType> = ({ color, scale }) => {
+const FullLogoIcon: React.FC<IconType> = ({ color, scale, width }) => {
   const theme: ThemeType = useContext(ThemeContext);
   const iconColor = color ? color : theme.colors.iconColor;
 
   return (
-    <Svg scale={scale} viewBox="0 0 1701 441" fill="none">
+    <SvgVaried
+      width={width ? width : '300px'}
+      scale={scale}
+      viewBox="0 0 1674 320"
+      fill="none"
+    >
       <path
         d="M122.702 0H210.453C231.866 0 250.888 4.89267 267.521 14.678C284.154 24.2409 297.058 37.9182 306.235 55.7096C315.412 73.2788 320 93.6276 320 116.757C320 139.886 315.412 160.346 306.235 178.137C297.058 195.707 284.154 209.384 267.521 219.169C250.888 228.732 231.866 233.513 210.453 233.513H122.702V0ZM208.733 196.818C223.454 196.818 236.358 193.594 247.446 187.145C258.727 180.472 267.33 171.132 273.256 159.123C279.374 146.891 282.433 132.769 282.433 116.757C282.433 100.745 279.374 86.7338 273.256 74.7243C267.33 62.4926 258.727 53.1522 247.446 46.7027C236.358 40.0309 223.454 36.695 208.733 36.695H122.702V86.4865V172.973H159.982V196.818H208.733Z"
         fill={iconColor}
@@ -42,7 +47,7 @@ const FullLogoIcon: React.FC<IconType> = ({ color, scale }) => {
         d="M1478.34 42.6173H1565.36C1586.6 42.6173 1605.46 47.5362 1621.96 57.374C1638.45 66.9882 1651.25 80.7387 1660.35 98.6256C1669.45 116.289 1674 136.747 1674 160C1674 183.253 1669.45 203.823 1660.35 221.71C1651.25 239.373 1638.45 253.124 1621.96 262.961C1605.46 272.576 1586.6 277.383 1565.36 277.383H1478.34V42.6173ZM1563.66 240.491C1578.26 240.491 1591.05 237.249 1602.05 230.765C1613.24 224.057 1621.77 214.667 1627.64 202.593C1633.71 190.296 1636.75 176.098 1636.75 160C1636.75 143.902 1633.71 129.816 1627.64 117.742C1621.77 105.445 1613.24 96.0544 1602.05 89.5704C1591.05 82.8628 1578.26 79.509 1563.66 79.509H1515.31V240.491H1563.66Z"
         fill={iconColor}
       />
-    </Svg>
+    </SvgVaried>
   );
 };
 export default FullLogoIcon;

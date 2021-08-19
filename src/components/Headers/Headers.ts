@@ -2,7 +2,15 @@ import styled from 'styled-components';
 import { ThemeType } from '../../theme/theme';
 import { commonStyles, headingStyles } from './Headers.styles';
 
-type HeadingTagName = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+type HeadingTagName =
+  | 'xLargeH1'
+  | 'largeH1'
+  | 'h1'
+  | 'h2'
+  | 'h3'
+  | 'h4'
+  | 'h5'
+  | 'h6';
 
 export type HeadingProps = {
   fontColor?: string;

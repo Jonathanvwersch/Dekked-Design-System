@@ -1,14 +1,8 @@
 import React, { ReactNode } from 'react';
-import { ButtonDanger, ButtonPrimary, ButtonSecondary } from './Button.styles';
 import { ComponentLoadingSpinner } from '../LoadingSpinner/LoadingSpinner';
 import { BUTTON_THEME, BUTTON_TYPES, SIZES } from '../../typesAndEnums';
 import styled from 'styled-components';
-
-const ButtonStyles = {
-  primary: ButtonPrimary,
-  secondary: ButtonSecondary,
-  danger: ButtonDanger,
-};
+import { StyledButton } from './Button.styles';
 
 interface ButtonProps {
   children: ReactNode;
@@ -43,11 +37,10 @@ const Button: React.FC<ButtonProps> = ({
   ariaLabel,
   id,
 }) => {
-  const Button = ButtonStyles[buttonStyle];
   const buttonClassName = className ? className : fullWidth ? 'fullWidth' : '';
 
   return (
-    <Button
+    <StyledButton
       id={id}
       type={type}
       disabled={isDisabled || isLoading}
@@ -59,6 +52,7 @@ const Button: React.FC<ButtonProps> = ({
       borderRadius={borderRadius}
       aria-label={ariaLabel}
       fontSize={fontSize}
+      buttonStyle={buttonStyle}
     >
       {isLoading ? (
         <>
@@ -68,7 +62,7 @@ const Button: React.FC<ButtonProps> = ({
       ) : (
         children
       )}
-    </Button>
+    </StyledButton>
   );
 };
 

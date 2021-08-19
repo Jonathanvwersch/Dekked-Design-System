@@ -11,8 +11,16 @@ export const commonStyles = css<HeadingProps>`
 `;
 
 export const headingStyles = {
+  xLargeH1: css`
+    font-size: ${({ theme }) => theme.typography.fontSizes.size70};
+    line-height: ${({ theme }) => theme.typography.lineHeightSmall};
+  `,
+  largeH1: css`
+    font-size: ${({ theme }) => theme.typography.fontSizes.size60};
+    line-height: ${({ theme }) => theme.typography.lineHeightSmall};
+  `,
   h1: css`
-    font-size: ${({ theme }) => theme.typography.fontSizes.size48};
+    font-size: ${({ theme }) => theme.typography.fontSizes.size54};
     line-height: ${({ theme }) => theme.typography.lineHeightSmall};
   `,
   h2: css`

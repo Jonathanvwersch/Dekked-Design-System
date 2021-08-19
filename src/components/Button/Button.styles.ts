@@ -1,12 +1,13 @@
-import styled from 'styled-components';
-import { SIZES } from '../../typesAndEnums';
+import styled, { css } from 'styled-components';
+import { BUTTON_THEME, SIZES } from '../../typesAndEnums';
 
 interface ButtonProps {
   isLoading: boolean;
   size: SIZES;
-  width: SIZES | string;
+  width?: SIZES | string;
   borderRadius?: string;
   fontSize?: string;
+  buttonStyle?: BUTTON_THEME;
 }
 
 export const StyledButton = styled.button<ButtonProps>`
@@ -65,14 +66,25 @@ export const StyledButton = styled.button<ButtonProps>`
       filter: none;
     }
   }
+
+  ${({ buttonStyle }) => {
+    switch (buttonStyle) {
+      case BUTTON_THEME.SECONDARY:
+        return ButtonSecondary;
+      case BUTTON_THEME.DANGER:
+        return ButtonDanger;
+      default:
+        return ButtonPrimary;
+    }
+  }}
 `;
 
-export const ButtonPrimary = styled<any>(StyledButton)`
+export const ButtonPrimary = css`
   color: white;
   background-color: ${({ theme }) => theme.colors.primary};
 `;
 
-export const ButtonSecondary = styled<any>(StyledButton)`
+export const ButtonSecondary = css`
   background-color: ${({ theme }) => theme.colors.backgrounds.pageBackground};
   color: ${({ theme }) => theme.colors.fontColor};
   border-color: ${({ theme }) => theme.colors.grey1};
@@ -80,7 +92,7 @@ export const ButtonSecondary = styled<any>(StyledButton)`
   border-style: solid;
 `;
 
-export const ButtonDanger = styled<any>(StyledButton)`
+export const ButtonDanger = css`
   background-color: ${({ theme }) => theme.colors.danger};
   color: white;
 `;

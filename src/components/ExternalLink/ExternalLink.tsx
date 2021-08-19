@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-interface TextProps {
+interface ExternalLinkProps {
   fontSize?: string;
   fontWeight?: string;
   fontColor?: string;
@@ -12,25 +12,19 @@ interface TextProps {
   filterHover?: boolean; // set to true if you want to apply a filter based hover state
   filterActive?: boolean; // set to true if you want to apply a filter based active state
   textDecoration?: string;
-  placeholder?: string;
   textAlign?: string;
   userSelect?: string;
 }
 
-const Text: React.FC<TextProps> = ({ children, ...props }) => {
+const ExternalLink: React.FC<ExternalLinkProps> = ({ children, ...props }) => {
   return (
-    <StyledText
-      placeholder={props.placeholder}
-      spellCheck={false}
-      className={props.className}
-      {...props}
-    >
+    <Link className={props.className} {...props}>
       {children}
-    </StyledText>
+    </Link>
   );
 };
 
-const StyledText = styled.div<TextProps>`
+const Link = styled.a<ExternalLinkProps>`
   font-size: ${({ fontSize, theme }) =>
     fontSize ? fontSize : theme.typography.fontSizes.size12};
   font-weight: ${({ fontWeight }) => fontWeight};
@@ -41,6 +35,7 @@ const StyledText = styled.div<TextProps>`
   text-decoration: ${({ textDecoration }) => textDecoration};
   text-align: ${({ textAlign }) => textAlign};
   user-select: ${({ userSelect }) => userSelect};
+  cursor: pointer;
 
   &.overflow {
     text-overflow: ellipsis;
@@ -49,7 +44,6 @@ const StyledText = styled.div<TextProps>`
   }
 
   &:hover {
-    color: ${({ hover }) => hover};
     filter: ${({ filterHover, theme }) =>
       filterHover ? theme.colors.hover.filter : null};
   }
@@ -58,10 +52,6 @@ const StyledText = styled.div<TextProps>`
     filter: ${({ filterActive, theme }) =>
       filterActive ? theme.colors.active.filter : null};
   }
-
-  &:empty:before {
-    content: attr(placeholder);
-  }
 `;
 
-export default Text;
+export default ExternalLink;

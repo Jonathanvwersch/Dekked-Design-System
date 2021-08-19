@@ -76,6 +76,8 @@ export type ThemeType = {
       size42: string;
       size48: string;
       size54: string;
+      size60: string;
+      size70: string;
     };
 
     lineHeight: string;
@@ -294,6 +296,8 @@ export const theme = (darkTheme?: boolean): ThemeType => {
         size42: '42px',
         size48: '48px',
         size54: '54px',
+        size60: '60px',
+        size70: '70px',
       },
 
       lineHeight: '1.6',

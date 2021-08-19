@@ -3,6 +3,7 @@ import { ThemeType } from '../theme/theme';
 import { ThemeContext } from 'styled-components';
 import { Svg } from '.';
 import { IconType } from '../typesAndEnums';
+
 const H2Icon: React.FC<IconType> = ({ color, size }) => {
   const theme: ThemeType = useContext(ThemeContext);
   const iconColor = color ? color : theme.colors.iconColor;

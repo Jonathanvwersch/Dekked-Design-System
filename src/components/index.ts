@@ -20,5 +20,5 @@ export { default as Footer } from './Footer/Footer';
 export { default as Tooltip } from './Tooltip/Tooltip';
 export { default as DragBlock } from './DragBlock/DragBlock';
 export { default as ConditionalWrapper } from './ConditionalWrapper/ConditionalWrapper';
-export { default as ExternalLink } from './ExternalLink/ExternalLink';
+export { default as Link } from './Link/Link';
 export * from './Modals';

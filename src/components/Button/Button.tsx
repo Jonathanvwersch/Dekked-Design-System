@@ -23,7 +23,7 @@ interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = ({
-  type = BUTTON_TYPES.BUTTON,
+  type,
   isLoading = false,
   handleClick,
   children,
@@ -37,7 +37,7 @@ const Button: React.FC<ButtonProps> = ({
   borderRadius,
   ariaLabel,
   id,
-  as,
+  ...props
 }) => {
   const buttonClassName = className ? className : fullWidth ? 'fullWidth' : '';
 
@@ -53,9 +53,9 @@ const Button: React.FC<ButtonProps> = ({
       width={width}
       borderRadius={borderRadius}
       aria-label={ariaLabel}
-      as={as}
       fontSize={fontSize}
       buttonStyle={buttonStyle}
+      {...props}
     >
       {isLoading ? (
         <>

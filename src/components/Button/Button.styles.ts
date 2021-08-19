@@ -16,6 +16,7 @@ export const StyledButton = styled.button<ButtonProps>`
   border-radius: ${({ theme, borderRadius }) =>
     borderRadius ? borderRadius : theme.sizes.borderRadius[SIZES.MEDIUM]};
   padding: ${({ theme }) => `${theme.spacers.size4} ${theme.spacers.size16}`};
+  text-decoration: none;
   font-size: ${({ theme, size, fontSize }) =>
     fontSize
       ? fontSize

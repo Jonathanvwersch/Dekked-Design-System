@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-interface ExternalLinkProps {
+interface LinkProps {
   fontSize?: string;
   fontWeight?: string;
   fontColor?: string;
@@ -9,22 +9,21 @@ interface ExternalLinkProps {
   className?: string;
   maxWidth?: string;
   hover?: string;
-  filterHover?: boolean; // set to true if you want to apply a filter based hover state
   filterActive?: boolean; // set to true if you want to apply a filter based active state
   textDecoration?: string;
   textAlign?: string;
   userSelect?: string;
 }
 
-const ExternalLink: React.FC<ExternalLinkProps> = ({ children, ...props }) => {
+const Link: React.FC<LinkProps> = ({ children, ...props }) => {
   return (
-    <Link className={props.className} {...props}>
+    <StyledLink className={props.className} {...props}>
       {children}
-    </Link>
+    </StyledLink>
   );
 };
 
-const Link = styled.a<ExternalLinkProps>`
+const StyledLink = styled.a<LinkProps>`
   font-size: ${({ fontSize, theme }) =>
     fontSize ? fontSize : theme.typography.fontSizes.size12};
   font-weight: ${({ fontWeight }) => fontWeight};
@@ -32,7 +31,7 @@ const Link = styled.a<ExternalLinkProps>`
     fontColor ? fontColor : theme.colors.fontColor};
   margin: 0;
   max-width: ${({ maxWidth }) => maxWidth};
-  text-decoration: ${({ textDecoration }) => textDecoration};
+  text-decoration: ${({ textDecoration }) => textDecoration || 'none'};
   text-align: ${({ textAlign }) => textAlign};
   user-select: ${({ userSelect }) => userSelect};
   cursor: pointer;
@@ -44,14 +43,12 @@ const Link = styled.a<ExternalLinkProps>`
   }
 
   &:hover {
-    filter: ${({ filterHover, theme }) =>
-      filterHover ? theme.colors.hover.filter : null};
+    color: ${({ theme }) => theme.colors.primary};
   }
 
   &:active {
-    filter: ${({ filterActive, theme }) =>
-      filterActive ? theme.colors.active.filter : null};
+    filter: ${({ theme }) => theme.colors.active.filter};
   }
 `;
 
-export default ExternalLink;
+export default Link;

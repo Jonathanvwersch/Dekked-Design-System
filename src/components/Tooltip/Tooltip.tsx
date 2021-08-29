@@ -1,10 +1,9 @@
 import React, { ReactElement, useContext } from 'react';
 import { createPortal } from 'react-dom';
-import { FormattedMessage, useIntl } from 'react-intl';
+import { FormattedMessage } from 'react-intl';
 import ReactTooltip, { Effect, Offset, Place, Type } from 'react-tooltip';
 import styled, { ThemeContext } from 'styled-components';
 import { ConditionalWrapper } from '..';
-import { formatMessage } from '../../intl';
 import { SIZES } from '../../typesAndEnums';
 
 interface TooltipProps {
@@ -37,7 +36,6 @@ const Tooltip: React.FC<TooltipProps> = ({
   tooltipChildrenStyle,
 }) => {
   const theme = useContext(ThemeContext);
-  const intl = useIntl();
 
   return (
     <>
@@ -49,7 +47,6 @@ const Tooltip: React.FC<TooltipProps> = ({
           place={place}
           effect={effect}
           offset={offset}
-          role={formatMessage(text, intl)}
           textColor={textColor || theme.colors.oppositeFontColor}
           delayShow={500}
           backgroundColor={

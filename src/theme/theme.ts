@@ -113,6 +113,7 @@ export type ThemeType = {
         small: string;
         medium: string;
         large: string;
+        xLarge: string;
       };
       width: {
         small: string;
@@ -131,7 +132,7 @@ export type ThemeType = {
       small: string;
       medium: string;
       large: string;
-      xlarge: string;
+      xLarge: string;
     };
 
     wrappers: {
@@ -339,6 +340,7 @@ export const theme = (darkTheme?: boolean): ThemeType => {
           small: '32px',
           medium: '40px',
           large: '48px;',
+          xLarge: '54px;',
         },
         width: {
           small: '150px',
@@ -351,7 +353,7 @@ export const theme = (darkTheme?: boolean): ThemeType => {
         small: '18px',
         medium: '20px',
         large: '24px',
-        xlarge: '28px',
+        xLarge: '28px',
       },
 
       wrappers: {

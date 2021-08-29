@@ -48,7 +48,7 @@ const HoverCard: React.FC<HoverCardProps> = ({ children, ...props }) => {
 
   useLayoutEffect(() => {
     const handleFakeFocusClick = (e: KeyboardEvent) => {
-      if (e.key === 'Enter') {
+      if (e.key === 'Enter' || e.key === 'Tab') {
         e.preventDefault();
         props.handleClick && props.handleClick();
         props.handleMouseDown && props.handleMouseDown();

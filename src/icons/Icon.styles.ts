@@ -31,5 +31,5 @@ export const SvgVaried = styled(Icon)<IconType>`
   width: ${({ width }) => width && width};
   height: ${({ height }) => height && height};
   transform: ${({ rotate }) => rotate};
-  transform: scale(${({ scale }) => scale});
+  transform: ${({ scale }) => scale && `scale(${scale})`};
 `;

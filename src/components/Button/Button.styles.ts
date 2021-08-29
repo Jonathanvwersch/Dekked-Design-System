@@ -8,6 +8,7 @@ interface ButtonProps {
   borderRadius?: string;
   fontSize?: string;
   buttonStyle?: BUTTON_THEME;
+  fontWeight?: string;
 }
 
 export const StyledButton = styled.button<ButtonProps>`
@@ -17,6 +18,7 @@ export const StyledButton = styled.button<ButtonProps>`
     borderRadius ? borderRadius : theme.sizes.borderRadius[SIZES.MEDIUM]};
   padding: ${({ theme }) => `${theme.spacers.size4} ${theme.spacers.size16}`};
   text-decoration: none;
+  font-weight: ${({ fontWeight }) => fontWeight};
   font-size: ${({ theme, size, fontSize }) =>
     fontSize
       ? fontSize
@@ -29,7 +31,7 @@ export const StyledButton = styled.button<ButtonProps>`
     width === SIZES.SMALL ||
     width === SIZES.MEDIUM ||
     width === SIZES.LARGE ||
-    width === SIZES.LARGE
+    width === SIZES.XLARGE
       ? theme.sizes.button.width[width]
       : width};
   cursor: pointer;

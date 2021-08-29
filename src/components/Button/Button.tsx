@@ -20,6 +20,7 @@ interface ButtonProps {
   ariaLabel?: string;
   id?: string;
   as?: any;
+  fontWeight?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -37,6 +38,7 @@ const Button: React.FC<ButtonProps> = ({
   borderRadius,
   ariaLabel,
   id,
+  fontWeight,
   ...props
 }) => {
   const buttonClassName = className ? className : fullWidth ? 'fullWidth' : '';
@@ -55,6 +57,7 @@ const Button: React.FC<ButtonProps> = ({
       aria-label={ariaLabel}
       fontSize={fontSize}
       buttonStyle={buttonStyle}
+      fontWeight={fontWeight}
       {...props}
     >
       {isLoading ? (

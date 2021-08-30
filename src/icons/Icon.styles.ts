@@ -28,8 +28,8 @@ export const Svg = styled(Icon)<IconType>`
 `;
 
 export const SvgVaried = styled(Icon)<IconType>`
-  width: ${({ width }) => width && width};
-  height: ${({ height }) => height && height};
+  width: ${({ width }) => width || 'auto'};
+  height: ${({ height }) => height || 'auto'};
   transform: ${({ rotate }) => rotate};
   transform: ${({ scale }) => scale && `scale(${scale})`};
 `;

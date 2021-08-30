@@ -4,13 +4,14 @@ import { ThemeContext } from 'styled-components';
 import { SvgVaried } from '.';
 import { IconType } from '../typesAndEnums';
 
-const FullLogoIcon: React.FC<IconType> = ({ color, scale, width }) => {
+const FullLogoIcon: React.FC<IconType> = ({ color, scale, width, height }) => {
   const theme: ThemeType = useContext(ThemeContext);
   const iconColor = color ? color : theme.colors.iconColor;
 
   return (
     <SvgVaried
-      width={width ? width : '300px'}
+      width={width}
+      height={height}
       scale={scale}
       viewBox="0 0 1674 320"
       fill="none"

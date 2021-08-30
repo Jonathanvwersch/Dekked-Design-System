@@ -18,6 +18,7 @@ interface ShadowCardProps {
   tabIndex?: number;
   ariaLabel?: string;
   role?: string;
+  overflow?: string;
 }
 
 const ShadowCard: React.FC<ShadowCardProps> = ({ children, ...props }) => {
@@ -46,7 +47,7 @@ const StyledShadowCard = styled.div<ShadowCardProps>`
   position: ${({ position }) => position};
   padding: ${({ padding }) => padding};
   z-index: ${({ zIndex }) => zIndex};
-  overflow: hidden;
+  overflow: ${({ overflow }) => overflow || 'hidden'}
   background-color: ${({ theme, backgroundColor }) =>
     backgroundColor
       ? backgroundColor

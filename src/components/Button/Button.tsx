@@ -21,6 +21,7 @@ interface ButtonProps {
   id?: string;
   as?: any;
   fontWeight?: string;
+  buttonRef?: React.RefObject<HTMLButtonElement>;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -39,6 +40,7 @@ const Button: React.FC<ButtonProps> = ({
   ariaLabel,
   id,
   fontWeight,
+  buttonRef,
   ...props
 }) => {
   const buttonClassName = className ? className : fullWidth ? 'fullWidth' : '';
@@ -55,6 +57,7 @@ const Button: React.FC<ButtonProps> = ({
       width={width}
       borderRadius={borderRadius}
       aria-label={ariaLabel}
+      ref={buttonRef}
       fontSize={fontSize}
       buttonStyle={buttonStyle}
       fontWeight={fontWeight}

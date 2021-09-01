@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 interface LinkProps {
+  href: string;
   fontSize?: string;
   fontWeight?: string;
   fontColor?: string;
@@ -13,11 +14,24 @@ interface LinkProps {
   textDecoration?: string;
   textAlign?: string;
   userSelect?: string;
+  hreflang?: string;
+  target?: string;
+  rel?: string;
+  referrerpolicy?: string;
+  type?: string;
+  ping?: string;
+  style?: React.CSSProperties;
 }
 
 const Link: React.FC<LinkProps> = ({ children, ...props }) => {
   return (
-    <StyledLink className={props.className} {...props}>
+    <StyledLink
+      {...props}
+      className={props.className}
+      referrerpolicy={
+        props.target === '_blank' ? 'noopener noreferrer' : props.referrerpolicy
+      }
+    >
       {children}
     </StyledLink>
   );

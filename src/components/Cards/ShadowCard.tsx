@@ -14,11 +14,13 @@ interface ShadowCardProps {
   cardRef?: React.RefObject<HTMLDivElement>;
   zIndex?: string;
   maxHeight?: string;
+  maxWidth?: string;
   id?: string;
   tabIndex?: number;
   ariaLabel?: string;
   role?: string;
   overflow?: string;
+  style?: React.CSSProperties;
 }
 
 const ShadowCard: React.FC<ShadowCardProps> = ({ children, ...props }) => {
@@ -39,6 +41,7 @@ const ShadowCard: React.FC<ShadowCardProps> = ({ children, ...props }) => {
 const StyledShadowCard = styled.div<ShadowCardProps>`
   box-shadow: ${({ theme }) => theme.boxShadow};
   max-height: ${({ maxHeight }) => maxHeight};
+  max-width: ${({ maxWidth }) => maxWidth};
   border-radius: ${({ theme, borderRadius }) =>
     borderRadius ? borderRadius : theme.sizes.borderRadius[SIZES.MEDIUM]};
   height: ${({ height }) => height};
@@ -47,7 +50,7 @@ const StyledShadowCard = styled.div<ShadowCardProps>`
   position: ${({ position }) => position};
   padding: ${({ padding }) => padding};
   z-index: ${({ zIndex }) => zIndex};
-  overflow: ${({ overflow }) => overflow || 'hidden'}
+  overflow: ${({ overflow }) => overflow || 'hidden'};
   background-color: ${({ theme, backgroundColor }) =>
     backgroundColor
       ? backgroundColor

@@ -15,6 +15,7 @@ interface TextProps {
   placeholder?: string;
   textAlign?: string;
   userSelect?: string;
+  lineHeight?: string;
 }
 
 const Text: React.FC<TextProps> = ({ children, ...props }) => {
@@ -40,6 +41,7 @@ const StyledText = styled.div<TextProps>`
   max-width: ${({ maxWidth }) => maxWidth};
   text-decoration: ${({ textDecoration }) => textDecoration};
   text-align: ${({ textAlign }) => textAlign};
+  line-height: ${({ lineHeight }) => lineHeight};
   user-select: ${({ userSelect }) => userSelect};
 
   &.overflow {

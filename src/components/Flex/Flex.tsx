@@ -29,6 +29,7 @@ interface FlexProps {
   style?: React.CSSProperties | undefined;
   display?: string;
   flexGrow?: string;
+  as?: any;
   displayFlex?: string;
 }
 

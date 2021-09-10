@@ -16,6 +16,7 @@ interface TextProps {
   textAlign?: string;
   userSelect?: string;
   lineHeight?: string;
+  as?: any;
 }
 
 const Text: React.FC<TextProps> = ({ children, ...props }) => {

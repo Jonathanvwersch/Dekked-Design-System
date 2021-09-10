@@ -17,7 +17,16 @@ interface LinkProps {
   hreflang?: string;
   target?: string;
   rel?: string;
-  referrerpolicy?: string;
+  referrerPolicy?:
+    | ''
+    | 'no-referrer'
+    | 'no-referrer-when-downgrade'
+    | 'origin'
+    | 'origin-when-cross-origin'
+    | 'same-origin'
+    | 'strict-origin'
+    | 'strict-origin-when-cross-origin'
+    | 'unsafe-url';
   type?: string;
   ping?: string;
   style?: React.CSSProperties;
@@ -28,9 +37,7 @@ const Link: React.FC<LinkProps> = ({ children, ...props }) => {
     <StyledLink
       {...props}
       className={props.className}
-      referrerpolicy={
-        props.target === '_blank' ? 'noopener noreferrer' : props.referrerpolicy
-      }
+      referrerPolicy={props.referrerPolicy}
     >
       {children}
     </StyledLink>

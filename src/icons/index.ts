@@ -58,4 +58,5 @@ export { default as TwitterIcon } from './TwitterIcon';
 export { default as DiscordIcon } from './DiscordIcon';
 export { default as EmailIcon } from './EmailIcon';
 export { default as CodeIcon } from './CodeIcon';
+export { default as PictureIcon } from './PictureIcon';
 export * from './Icon.styles';

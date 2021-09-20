@@ -100,6 +100,7 @@ const Modal = styled.div<{
   width: ${({ modalWidth }) => modalWidth};
   max-width: ${({ modalWidth, theme }) =>
     modalWidth && theme.sizes.wrappers[SIZES.SMALL]};
+  max-height: 1000px;
   height: ${({ modalHeight }) => modalHeight};
   position: fixed;
   z-index: 100;

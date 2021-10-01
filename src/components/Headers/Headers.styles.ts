@@ -8,6 +8,8 @@ export const commonStyles = css<HeadingProps>`
   text-align: ${({ textAlign }) => textAlign};
   font-weight: ${({ fontWeight, theme }) =>
     fontWeight && theme.typography.fontWeights[fontWeight]};
+  font-family: ${({ fontFamily, theme }) =>
+    fontFamily ? fontFamily : theme.typography.fontFamily};
 `;
 
 export const headingStyles = {

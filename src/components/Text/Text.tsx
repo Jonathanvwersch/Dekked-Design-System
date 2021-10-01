@@ -17,7 +17,11 @@ interface TextProps {
   userSelect?: string;
   lineHeight?: string;
   fontFamily?: string;
+  whiteSpace?: string;
+  overflow?: string;
+  textOverflow?: string;
   as?: any;
+  style?: React.CSSProperties;
 }
 
 const Text: React.FC<TextProps> = ({ children, ...props }) => {
@@ -43,10 +47,13 @@ const StyledText = styled.div<TextProps>`
     fontColor ? fontColor : theme.colors.fontColor};
   margin: 0;
   max-width: ${({ maxWidth }) => maxWidth};
+  white-space: ${({ whiteSpace }) => whiteSpace};
   text-decoration: ${({ textDecoration }) => textDecoration};
   text-align: ${({ textAlign }) => textAlign};
   line-height: ${({ lineHeight }) => lineHeight};
   user-select: ${({ userSelect }) => userSelect};
+  text-overflow: ${({ textOverflow }) => textOverflow};
+  overflow: ${({ overflow }) => overflow};
 
   &.overflow {
     text-overflow: ellipsis;

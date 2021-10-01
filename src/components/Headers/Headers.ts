@@ -14,6 +14,7 @@ type HeadingTagName =
 
 export type HeadingProps = {
   fontColor?: string;
+  fontFamily?: string;
   styledAs?: HeadingTagName;
   textAlign?: string;
   fontWeight?: keyof ThemeType['typography']['fontWeights'];

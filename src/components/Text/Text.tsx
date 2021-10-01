@@ -16,6 +16,7 @@ interface TextProps {
   textAlign?: string;
   userSelect?: string;
   lineHeight?: string;
+  fontFamily?: string;
   as?: any;
 }
 
@@ -35,6 +36,8 @@ const Text: React.FC<TextProps> = ({ children, ...props }) => {
 const StyledText = styled.div<TextProps>`
   font-size: ${({ fontSize, theme }) =>
     fontSize ? fontSize : theme.typography.fontSizes.size12};
+  font-family: ${({ fontFamily, theme }) =>
+    fontFamily ? fontFamily : theme.typography.fontFamily};
   font-weight: ${({ fontWeight }) => fontWeight};
   color: ${({ fontColor, theme }) =>
     fontColor ? fontColor : theme.colors.fontColor};

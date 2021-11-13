@@ -1,0 +1,21 @@
+import React, { useContext } from 'react';
+import { ThemeContext } from 'styled-components';
+import { ThemeType } from '../theme/theme';
+import { Svg } from '.';
+import { IconType } from '../typesAndEnums';
+
+const HomeIcon: React.FC<IconType> = ({ color, size }) => {
+  const theme: ThemeType = useContext(ThemeContext);
+  const iconColor = color ? color : theme.colors.iconColor;
+
+  return (
+    <Svg size={size} viewBox="0 0 16 16" fill="none">
+      <path
+        d="M14.7892 7.89063L8.75168 1.85626L8.34699 1.45157C8.25478 1.35997 8.13009 1.30856 8.00011 1.30856C7.87014 1.30856 7.74545 1.35997 7.65324 1.45157L1.21105 7.89063C1.11657 7.98475 1.0419 8.09684 0.991445 8.22028C0.940993 8.34373 0.915782 8.47603 0.917301 8.60938C0.923551 9.15938 1.38136 9.59845 1.93136 9.59845H2.59543V14.6875H13.4048V9.59845H14.0829C14.3501 9.59845 14.6017 9.49376 14.7907 9.3047C14.8838 9.2119 14.9576 9.10156 15.0077 8.98006C15.0579 8.85857 15.0835 8.72833 15.0829 8.59688C15.0829 8.33126 14.9782 8.0797 14.7892 7.89063V7.89063ZM8.87511 13.5625H7.12511V10.375H8.87511V13.5625ZM12.2798 8.47345V13.5625H9.87511V10C9.87511 9.6547 9.59543 9.37501 9.25011 9.37501H6.75011C6.4048 9.37501 6.12511 9.6547 6.12511 10V13.5625H3.72043V8.47345H2.22043L8.00168 2.69688L8.36261 3.05782L13.7814 8.47345H12.2798Z"
+        fill={iconColor}
+      />
+    </Svg>
+  );
+};
+
+export default HomeIcon;

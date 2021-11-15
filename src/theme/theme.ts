@@ -321,7 +321,7 @@ export const theme = (darkTheme?: boolean): ThemeType => {
       },
       scrollerModal: '272px',
 
-      sidebar: '230px',
+      sidebar: '250px',
 
       input: {
         small: '32px',
